@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "158857764104",
+    "firebase_url": "https://omniview-2af0b.firebaseio.com",
+    "project_id": "omniview-2af0b",
+    "storage_bucket": "omniview-2af0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158857764104:android:a1f1dd0a23d6f33e",
+        "android_client_info": {
+          "package_name": "com.dontplayfootball.omniview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158857764104-kr4shpnvrull0upt422qcbu2qdgn745d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dontplayfootball.omniview",
+            "certificate_hash": "df4281da36db4bef034c67e0627f972f75e3dd54"
+          }
+        },
+        {
+          "client_id": "158857764104-vj2h4n6jub2fioputrr68i4erdf1aaua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYJ801qzusaZOMLgcaZ1tNxz4eLK0_dVM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158857764104-vj2h4n6jub2fioputrr68i4erdf1aaua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
