@@ -36,7 +36,9 @@ while i <= 26:
     print("Player 4 is healthy with probability: " + str(healthVal))
 
     if (float(conVal) > 0.95) or (float(ankVal) > 0.95):
-        print("asdfasgdfguoiilyuktdyfyguhoifkdhguhoifkhdkguoh")
+        payload = {'title': 'PlayerHurt', 'message': 'Pull Player 4 out of game. They are at risk of injury.'}
+        r = requests.get('https://0llsliq03l.execute-api.us-east-2.amazonaws.com/prod/observer', params=payload)
+        print(r.text)
 
 
     i = i + 1
