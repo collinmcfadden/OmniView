@@ -1,0 +1,42 @@
+
+from clarifai.rest import ClarifaiApp
+from clarifai.rest import Image as ClImage
+from PIL import Image
+import requests
+
+app = ClarifaiApp(api_key='e94b13c558aa4151812e24481c660ed0')
+
+model = app.models.get('health')
+
+# sprained ankle
+# print(model.predict_by_url(url = 'http://ssorkc.com/wp-content/uploads/2013/08/sprained-ankle-in-basketball.jpg'))
+
+# concussion
+# print(model.predict_by_url(url="http://concussionguy.com/wp-content/uploads/2016/03/nfl-concussion-compressor.jpg"))
+
+i = 1
+while i <= 26:
+    print()
+    
+    imageStr = '/Users/RyanGontarek/Desktop/Hackathons/SportRecognitionTech/Photos/' + str(i) + '.png'
+
+#    imageStr = '/Users/RyanGontarek/Desktop/Hackathons/SportRecognitionTech/Photos/25.png'
+    image = ClImage(file_obj=open(imageStr, 'rb'))
+    asdf = model.predict([image])
+    Image.open(imageStr).show()
+
+    print(i)
+    conVal = asdf['outputs'][0]['data']['concepts'][0]['value']
+    print("Player 4 has a concussion with probability: " + str(conVal))
+
+    ankVal = asdf['outputs'][0]['data']['concepts'][1]['value']
+    print("Player 4 has a sprained ankle with probability: " + str(ankVal))
+
+    healthVal = asdf['outputs'][0]['data']['concepts'][2]['value']
+    print("Player 4 is healthy with probability: " + str(healthVal))
+
+    if (float(conVal) > 0.95) or (float(ankVal) > 0.95):
+        print("asdfasgdfguoiilyuktdyfyguhoifkdhguhoifkhdkguoh")
+
+
+    i = i + 1
