@@ -4,7 +4,7 @@ from clarifai.rest import Image as ClImage
 from PIL import Image
 import requests
 
-app = ClarifaiApp(api_key='e94b13c558aa4151812e24481c660ed0')
+app = ClarifaiApp(api_key= <PERSONAL_CLARIFY_API_KEY>)
 
 model = app.models.get('health')
 
